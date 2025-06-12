@@ -55,11 +55,12 @@ const HeroSection = () => {
 
             }}
           >
-            <Typography variant="h3" fontWeight={800} color="primary" sx={{ mb: 3, WebkitTextStroke: '0.5px #000', textAlign: 'center',textShadow: "2px 2px 4px rgba(0,0,0,0.3)", }}>
+            <Typography variant="h3" fontWeight={800} color="#fff" sx={{ mb: 3, WebkitTextStroke: '0.8px #fff', textAlign: 'center',textShadow: "2px 2px 4px rgba(0,0,0,0.3)",  background: 'linear-gradient(to right,rgb(20, 124, 35), #00FF7F)',WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent', }}>
               SmartBus
             </Typography>
-            <Typography variant="h3" fontWeight={800} color="primary" sx={{ mb: 3, WebkitTextStroke: '0.5px #000', textAlign: 'center',textShadow: "2px 2px 4px rgba(0,0,0,0.3)", }}>
-              Di chuyển thông minh
+<Typography variant="h3" fontWeight={800} color="#13AD2A" sx={{ mb: 3, WebkitTextStroke: '0.8px #fff', textAlign: 'center',textShadow: "2px 2px 4px rgba(0,0,0,0.3)",  background: 'linear-gradient(to right,rgb(20, 124, 35),rgb(16, 161, 89))',WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent', }}>           Di chuyển thông minh
             </Typography>
            <Typography variant="h5" sx={{ mb: 4, color: 'white', WebkitTextStroke: '0.1px black', textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}>
               Cùng SmartBus trải nghiệm hệ thống giao thông công cộng nhanh,
