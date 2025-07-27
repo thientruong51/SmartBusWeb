@@ -63,7 +63,7 @@ const Statistics = () => {
             color="white"
             textAlign={{ xs: 'center', md: 'left' }}
           >
-            Hàng trăm ngàn người sử dụng BusMap để tối ưu hoá hành trình di chuyển bằng phương tiện công cộng 🚌
+            Hàng trăm ngàn người sử dụng SmartBus để tối ưu hoá hành trình di chuyển bằng phương tiện công cộng 🚌
           </Typography>
         </Box>
 
