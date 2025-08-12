@@ -33,22 +33,39 @@ const Footer = () => {
           <Box sx={{ flex: 1, minWidth: 150 }}>
             <Typography fontWeight={600} gutterBottom>Liên kết</Typography>
             {[
-              { label: "Tính năng", path: "/features" },
-              { label: "Cách sử dụng", path: "/features" },
-              { label: "Tải ứng dụng", path: "#" },
+              { label: "Tính năng", path: "/features", external: false },
+              { label: "Cách sử dụng", path: "/features", external: false },
+              {
+                label: "Tải ứng dụng",
+                path: "https://expo.dev/artifacts/eas/ho8ZLQhzr6EwG9nBs9J61p.apk",
+                external: true
+              },
             ].map((item, i) => (
               <Typography key={i} variant="body2">
-                <MuiLink
-                  component={RouterLink}
-                  to={item.path}
-                  color="inherit"
-                  underline="hover"
-                >
-                  {item.label}
-                </MuiLink>
+                {item.external ? (
+                  <MuiLink
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="inherit"
+                    underline="hover"
+                  >
+                    {item.label}
+                  </MuiLink>
+                ) : (
+                  <MuiLink
+                    component={RouterLink}
+                    to={item.path}
+                    color="inherit"
+                    underline="hover"
+                  >
+                    {item.label}
+                  </MuiLink>
+                )}
               </Typography>
             ))}
           </Box>
+
 
           <Box sx={{ flex: 1, minWidth: 150 }}>
             <Typography fontWeight={600} gutterBottom>Hỗ trợ</Typography>

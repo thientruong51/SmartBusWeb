@@ -1,5 +1,5 @@
-import { Box, Button, Container, Typography } from "@mui/material"
-import { motion } from "framer-motion"
+import { Box, Button, Container, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -20,6 +20,7 @@ const HeroSection = () => {
           width: "100%",
           height: "100%",
           zIndex: 1,
+          pointerEvents: "none", // ngăn overlay chặn click
         },
         pt: { xs: 10, md: 16 },
         pb: { xs: 12, md: 20 },
@@ -31,7 +32,7 @@ const HeroSection = () => {
       <Container
         sx={{
           position: "relative",
-          zIndex: 2,
+          zIndex: 3, // nổi lên trên overlay/SVG
           display: "flex",
           flexDirection: "column",
           alignItems: { xs: "center", md: "flex-end" },
@@ -52,20 +53,56 @@ const HeroSection = () => {
               py: { xs: 4, md: 5 },
               borderRadius: 5,
               boxShadow: 6,
-
             }}
           >
-            <Typography variant="h3" fontWeight={800} color="#fff" sx={{ mb: 3, WebkitTextStroke: '0.8px #fff', textAlign: 'center',textShadow: "2px 2px 4px rgba(0,0,0,0.3)",  background: 'linear-gradient(to right,rgb(20, 124, 35), #00FF7F)',WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent', }}>
+            <Typography
+              variant="h3"
+              fontWeight={800}
+              color="#fff"
+              sx={{
+                mb: 3,
+                WebkitTextStroke: "0.8px #fff",
+                textAlign: "center",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+                background: "linear-gradient(to right,rgb(20, 124, 35), #00FF7F)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
               SmartBus
             </Typography>
-<Typography variant="h3" fontWeight={800} color="#13AD2A" sx={{ mb: 3, WebkitTextStroke: '0.8px #fff', textAlign: 'center',textShadow: "2px 2px 4px rgba(0,0,0,0.3)",  background: 'linear-gradient(to right,rgb(20, 124, 35),rgb(16, 161, 89))',WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent', }}>           Di chuyển thông minh
+
+            <Typography
+              variant="h3"
+              fontWeight={800}
+              color="#13AD2A"
+              sx={{
+                mb: 3,
+                WebkitTextStroke: "0.8px #fff",
+                textAlign: "center",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+                background:
+                  "linear-gradient(to right,rgb(20, 124, 35),rgb(16, 161, 89))",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Di chuyển thông minh
             </Typography>
-           <Typography variant="h5" sx={{ mb: 4, color: 'white', WebkitTextStroke: '0.1px black', textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}>
+
+            <Typography
+              variant="h5"
+              sx={{
+                mb: 4,
+                color: "white",
+                WebkitTextStroke: "0.1px black",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+              }}
+            >
               Cùng SmartBus trải nghiệm hệ thống giao thông công cộng nhanh,
               tiết kiệm và dễ sử dụng tại Việt Nam.
             </Typography>
+
             <Box
               sx={{
                 display: "flex",
@@ -74,7 +111,16 @@ const HeroSection = () => {
                 justifyContent: { xs: "center", md: "flex-end" },
               }}
             >
-              <Button variant="contained" color="primary" size="large" sx={{ fontWeight: 700 }}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                sx={{ fontWeight: 700, zIndex: 4 }} // chắc chắn nổi cao
+                component="a"
+                href="https://expo.dev/artifacts/eas/ho8ZLQhzr6EwG9nBs9J61p.apk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Tải ứng dụng
               </Button>
             </Box>
@@ -87,11 +133,12 @@ const HeroSection = () => {
         viewBox="-19 -20 1440 200"
         sx={{
           position: "absolute",
-          zIndex: 2,
+          zIndex: 1,           // thấp hơn nội dung
           bottom: 0,
           left: 0,
           width: "100%",
           height: "auto",
+          pointerEvents: "none", // SVG không bắt sự kiện chuột
         }}
       >
         <path
@@ -101,7 +148,7 @@ const HeroSection = () => {
         ></path>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

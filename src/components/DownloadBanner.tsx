@@ -27,10 +27,7 @@ const DownloadBanner = () => {
         }}
       >
         <Container maxWidth="md">
-          <Typography
-            variant="body1"
-            sx={{ fontSize: '1rem', mb: 1 }}
-          >
+          <Typography variant="body1" sx={{ fontSize: '1rem', mb: 1 }}>
             ● SmartBus – di chuyển an toàn, vô vàn tiện ích
           </Typography>
 
@@ -46,7 +43,7 @@ const DownloadBanner = () => {
             hoàn toàn miễn phí!
           </Typography>
 
-          <Typography variant="body1" sx={{ mb: 1,  }} fontWeight={600}>
+          <Typography variant="body1" sx={{ mb: 1 }} fontWeight={600}>
             Tải SmartBus tại
           </Typography>
 
@@ -59,32 +56,44 @@ const DownloadBanner = () => {
               mt: 1,
             }}
           >
+            {/* App Store - mờ + chữ Sắp có */}
             <Box
-              component="a"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
               sx={{
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
-                gap: 1,
-                px: 2,
-                py: 1,
-                border: '2px solid white',
-                borderRadius: 5,
-                color: 'white',
-                textDecoration: 'none',
-                minWidth: 140,
-                height: 40,
+                opacity: 0.5,
+                cursor: 'not-allowed',
               }}
             >
-              <img src="/images/appstore.png" alt="Apple" width={20} />
-              <Typography variant="body2" sx={{textShadow: "2px 2px 4px rgba(0,0,0,0.3)"}}>App Store</Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  px: 2,
+                  py: 1,
+                  border: '2px solid white',
+                  borderRadius: 5,
+                  color: 'white',
+                  minWidth: 140,
+                  height: 40,
+                }}
+              >
+                <img src="/images/appstore.png" alt="Apple" width={20} />
+                <Typography variant="body2" sx={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}>
+                  App Store
+                </Typography>
+              </Box>
+              <Typography variant="caption" color="white" sx={{ mt: 0.5 }}>
+                Sắp có
+              </Typography>
             </Box>
 
+            {/* Google Play - link Expo */}
             <Box
               component="a"
-              href="#"
+              href="https://expo.dev/artifacts/eas/ho8ZLQhzr6EwG9nBs9J61p.apk"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
