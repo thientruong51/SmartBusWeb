@@ -82,7 +82,7 @@ const DownloadBanner = () => {
               >
                 <img src="/images/appstore.png" alt="Apple" width={20} />
                 <Typography variant="body2" sx={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}>
-                  App Store
+                  IOS
                 </Typography>
               </Box>
               <Typography variant="caption" color="white" sx={{ mt: 0.5 }}>
@@ -111,7 +111,7 @@ const DownloadBanner = () => {
               }}
             >
               <img src="/images/googleplay.png" alt="Google Play" width={20} />
-              <Typography variant="body2">Google Play</Typography>
+              <Typography variant="body2">Android</Typography>
             </Box>
           </Box>
         </Container>
