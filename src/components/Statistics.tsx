@@ -7,8 +7,8 @@ import PersonIcon from '@mui/icons-material/Person';
 const stats = [
   {
     icon: <StarIcon sx={{ fontSize: 40, color: '#FFD700' }} />,
-    value: "4.5 / 5",
-    label: "Sao",
+    value: " ",
+    label: "🌟🌟🌟🌟🌟",
     desc: "Điểm đánh giá ứng dụng",
   },
   {
