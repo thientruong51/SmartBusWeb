@@ -76,7 +76,7 @@ const DownloadBanner = () => {
                   border: '2px solid white',
                   borderRadius: 5,
                   color: 'white',
-                  minWidth: 140,
+                  minWidth: 120,
                   height: 40,
                 }}
               >
@@ -103,7 +103,7 @@ const DownloadBanner = () => {
                 borderRadius: 5,
                 color: 'white',
                 textDecoration: 'none',
-                minWidth: 140,
+                minWidth: 120,
                 height: 40,
               }}
             >
