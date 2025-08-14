@@ -13,19 +13,19 @@ const stats = [
   },
   {
     icon: <ThumbUpIcon sx={{ fontSize: 40, color: '#F57C00' }} />,
-    value: "50.000",
+    value: " ",
     label: "Lượt đánh giá",
-    desc: "App Store & Google Play",
+    desc: "Google Play",
   },
   {
     icon: <DownloadIcon sx={{ fontSize: 40, color: '#7E57C2' }} />,
-    value: "4.500.000",
+    value: " ",
     label: "Lượt tải xuống",
     desc: "Trên tất cả nền tảng",
   },
   {
     icon: <PersonIcon sx={{ fontSize: 40, color: '#29B6F6' }} />,
-    value: "600.000",
+    value: " ",
     label: "Người dùng hoạt động mỗi tháng",
     desc: "Trên tất cả nền tảng",
   },
