@@ -85,9 +85,6 @@ const DownloadBanner = () => {
                   IOS
                 </Typography>
               </Box>
-              <Typography variant="caption" color="white" sx={{ mt: 0.5 }}>
-                Sắp có
-              </Typography>
             </Box>
 
             {/* Google Play - link Expo */}
